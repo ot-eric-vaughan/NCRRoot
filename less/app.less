@@ -1,0 +1,393 @@
+/*
+/* Colors
+-------------------------------------------------- */
+@white:         #FFFFFF;
+
+/*
+/* Root Index Specific
+-------------------------------------------------- */
+
+#od-wrapper {
+  background: #e2e5e7; 
+  text-align: center;
+  -webkit-box-shadow: inset 0 0px 0px 0 #E3E3E3, inset 0 -8px 15px -12px #999; box-shadow: inset 0 0px 0px 0 #E3E3E3, inset 0 -8px 15px -12px #999;
+
+  p {
+    margin: 15px 0;
+    font-size: 13px;
+  }
+}
+
+.abs-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+  .navbar-wrapper {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  }
+  .navbar {margin-bottom: 0;}
+  .navbar-brand {
+    .img-responsive();
+  }
+  .navbar-nav > li > a {
+  color: @text-color;
+  font-size: 18px;
+  margin-top: 5px;
+}
+.navbar-nav > li > span {
+  background: url("../img/nav-div.png") center center no-repeat;
+  width: 3px;
+  height: 60px;
+  float: left;
+  position: relative;
+  top: 2px;
+}
+.navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+  color: @text-color;
+  background-color: #FFFFFF;
+}
+
+.navbar-nav button {position: relative; top: 15px; padding: 5px 12px; margin-left: 5px;}
+
+
+
+/* Home Section
+-------------------------------------------------- */
+.background-cover {
+background-size: cover !important;
+}
+
+.block-home {
+  background: url("../img/bg-scene.jpg") center right no-repeat;
+  min-height: 400px;
+  height: 99%;
+  position: relative;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+
+.block-home .down-btn {
+  position: absolute;
+  background: #ffffff;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  width: 50px;
+  height: 22px;
+  color: #330f13;
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  margin-left: -25px;
+  line-height: 22px;
+  font-size: 18px;
+}
+.block-home .down-btn .glyphicon {
+  display: block;
+  padding-top: 2px;
+}
+.block-home .down-btn:hover {
+  text-decoration: none;
+  color: #1f8dd6;
+}
+.block-home .down-btn .glyphicon {
+  display: block;
+  padding-top: 2px;
+}
+
+.block-home #home-hero {
+  position: absolute;
+  bottom: 0;
+}
+.block-home #home-hero img {
+}
+
+hr.hline_color {
+   background:#7f9aa9;
+   border: none;
+   border-bottom: 1px solid #c2dce9;
+   height:1px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.block h1 {font-size: 38px; text-align: center; padding: 0 10px;
+}
+
+// Home Carousel
+#benefits .item {height: 62px; font-size: 30px; line-height: 30px; text-shadow: none; text-align: center; margin: 0 10px;}
+
+#benefits .carousel-indicators {
+  position: relative;
+  bottom: -5px;
+  left: 50%;
+  z-index: 15;
+  width: 130px;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+#benefits .carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 6px;
+  text-indent: -999px;
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+#benefits .carousel-indicators li.active {
+  width: 10px;
+  height: 10px;
+  background-color: @brand-primary;
+}
+
+.block-home {
+  form input {
+    margin-top: 15px;
+    height: 40px;
+    border: 1px solid @brand-primary;
+  }
+
+  .submit {
+    margin: 15px 0;
+  }
+
+  #button-full {margin-top: 10px;}
+}
+
+#home-right {
+    margin-top: 80px;
+}
+
+
+/* Benefit Section
+-------------------------------------------------- */
+.block-benefits {
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  h1 {margin: 0 10px 20px !important;}
+
+  ul {margin-left: 15px;
+    li {
+      h3 {margin: 18px 0 5px 10px; font-size: 18px;}
+      p {margin-left: 10px;}
+    }
+    li:before {
+      content:'\2022';
+      display: block;
+      position: relative;
+      max-width: 0px;
+      max-height: 0px;
+      left: -10px;
+      top: -0px;
+      color: @brand-secondary;
+      font-size: 36px;
+    }
+  }
+
+  p {color: #73787a;}
+
+  .btn {margin-top: 40px;}
+}
+
+p.disclaimer {font-size: 11px; margin-top: 30px;}
+
+/* Footer 
+-------------------------------------------------- */
+#footer-main {
+min-height: 300px;
+position: relative;
+}
+
+footer {
+background: #303336;
+color: #e1e1e1;
+}
+
+#footer {color: #a1a8aa;}
+#footer-content {padding: 50px 0;}
+
+#footer ul {list-style: none;}
+#footer a {color: #a1a8aa;}
+
+#footer .accordion-group {
+    border: none;
+    border-bottom: 1px solid #5a5e5f;
+
+  .glyphicon:before {
+    font-family: @font-family-sans-serif;
+    font-size: 30px;
+    position: relative;
+    top: -5px;
+  }
+  .glyphicon:before {
+      content: "\2212";
+  }
+
+  .collapsed .glyphicon:before {
+      content: "\002b";
+  }
+
+  .accordion-toggle {background: #292b2e; text-decoration: none;}
+  .accordion-toggle:hover {text-decoration: none;}
+
+  .collapsed {background: #303336;}
+
+  .accordion-heading {
+    .accordion-toggle {text-transform: uppercase; padding: 12px 15px;}
+  }
+
+  .accordion-inner {
+      border-top: none;
+      padding: 0px 25px 9px;
+      background: #292b2e;
+
+      ul {
+        padding: 0;
+
+        a {text-decoration: underline; font-weight: normal; line-height: 24px;}
+        a:hover {text-decoration: none;}
+      }
+  }
+}
+
+/* Buttons 
+-------------------------------------------------- */
+.btn-cta.active {
+  color: rgba(96, 88, 0, 0.75);
+}
+.btn-cta {
+  color: #605800;
+  font-size: 25px;
+  font-weight: 700;
+  outline: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #eddc17;
+  background-image: -moz-linear-gradient(top, #f7e621, #ddcc08);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f7e621), to(#ddcc08));
+  background-image: -webkit-linear-gradient(top, #f7e621, #ddcc08);
+  background-image: -o-linear-gradient(top, #f7e621, #ddcc08);
+  background-image: linear-gradient(to bottom, #f7e621, #ddcc08);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff7e621', endColorstr='#ffddcc08', GradientType=0);
+  border-color: #ddcc08 #ddcc08 #938805;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #ddcc08;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-cta:hover,
+.btn-cta:focus,
+.btn-cta:active,
+.btn-cta.active,
+.btn-cta.disabled,
+.btn-cta[disabled] {
+  color: #605800;
+  background-color: #ddcc08;
+  *background-color: #c4b507;
+}
+.btn-cta:active,
+.btn-cta.active {
+  background-color: #ac9f06 ;
+}
+
+
+/* Category - Main
+-------------------------------------------------- */
+
+#page-jumbotron {
+    background-color: #FFFFFF;
+    left: auto;
+    position: relative;
+    top: auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+#page-jumbotron figure.jumbotron {
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: 100% !important;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+#page-jumbotron figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#page-jumbotron {
+  background-color:;
+}
+
+#page-jumbotron .feature {
+
+
+}
+
+/* Category - Auto
+-------------------------------------------------- */
+
+
+//
+// Device Specific Media Queries
+// --------------------------------------------------
+
+// Landscape phones and down
+@media (max-width: 320px) {
+  .block h1 {margin: 0 38px;}
+}
+
+// Landscape phones and down
+@media (max-width: 480px) {
+  .navbar-brand {
+    padding-left: 0; padding-right: 0; width: 260px !important;
+    img {width: 260px;}
+  }
+
+  #home-right {
+    margin-top: 40px;
+
+    #button-full {margin-top: 20px; margin-bottom: 20px;}
+  }
+
+  .block h1 {margin: 0 38px;}
+}
+
+// Landscape phone to portrait tablet
+@media (max-width: 767px) {
+  .navbar-brand {
+    width: 330px;
+  }
+  form input {display: block !important;}
+
+}
+
+// Portrait tablet to landscape and desktop
+@media (min-width: 768px) and (max-width: 979px) {
+  .block h1 {margin: 0 35px;}
+}
+
+// Large desktop
+@media (min-width: 1200px) {
+.block h1 {font-size: 48px; margin: 0 50px;}
+
+#benefits .item {height: 35px;}
+.block-home .submit {margin: 20px 0 30px;}
+}
