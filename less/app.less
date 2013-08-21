@@ -3,6 +3,7 @@
 -------------------------------------------------- */
 @white:         #FFFFFF;
 @articleLink:   #24bcdd;
+@articleText:   #73787a;
 
 /*
 /* Root Index Specific
@@ -69,6 +70,7 @@ background-size: cover !important;
   position: relative;
   overflow: hidden;
   color: #FFFFFF;
+  z-index: -999;
 }
 
 .block-home .down-btn {
@@ -312,47 +314,6 @@ footer .social-sites {float: right;}
   background-color: #ac9f06 ;
 }
 
-
-/* Category - Main
--------------------------------------------------- */
-
-#page-jumbotron {
-    background-color: #FFFFFF;
-    left: auto;
-    position: relative;
-    top: auto;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    width: 100%;
-    z-index: 1;
-}
-
-#page-jumbotron figure.jumbotron {
-    margin: 0;
-    padding: 0;
-    display: block;
-    height: 100% !important;
-    max-width: 100%;
-    overflow: hidden;
-    border-radius: 0;
-}
-
-#page-jumbotron figure img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-#page-jumbotron {
-  background-color:;
-}
-
-#page-jumbotron .feature {
-
-
-}
-
 /* Category - Auto
 -------------------------------------------------- */
 
@@ -373,13 +334,61 @@ footer .social-sites {float: right;}
     margin-bottom: 40px;
 
     .article-hero {width: 100%;}
-    p {font-weight: 300;}
-    a {color: @articleLink; text-transform: uppercase;}
+    p {font-weight: 300; color: @articleText;}
+    a {color: @articleLink; text-transform: uppercase; font-size: 13px;}
 
     .article-headline p {font-size: 11px; text-transform: uppercase;}
-    .article-full p     {font-size: 16px;}
+    .article-preview p     {font-size: 16px;}
   }
 }
+
+#sidebar {
+  h3 {font-size: 16px; text-transform: uppercase; margin-top: 40px; margin-bottom: 5px; font-weight: 300;}
+  h3:first-child{margin-top: 0;}
+  .social-sites {
+    img {width: 44px; height: 44px;}
+  }
+
+  p {font-size: 16px; line-height: 1; padding: 10px 10px 15px; font-weight: 300; background-color: #F4F4F4; border-top: 1px solid #cccfd4;}
+
+}
+
+    /* Category Jumbo Image
+    -------------------------------------------------- */
+.cat-jumbo {
+    display: block;
+    position: relative;
+    height: 500px;
+    margin-bottom: 60px;
+    background-size: cover;
+    background-position: top right;
+    z-index: -999;
+
+    .featured-caption {
+      background: rgba(255, 255, 255, .85);
+      position: static;
+      max-width: 480px;
+      padding: 20px;
+      margin-top: 60px;
+
+      h1 {
+        color: @brand-primary;
+        margin: 0 0 10px 0;
+        text-align: left;
+      }
+      p {font-size: 16px; color: @articleText;}
+      a {font-size: 13px; color: @articleLink; text-transform: uppercase;}
+    }      
+}
+
+#real-estate .cat-jumbo {
+    background-position: top left;
+    
+    .featured-caption {
+      float: right;
+    }      
+}
+
 
 
 //
@@ -410,6 +419,15 @@ footer .social-sites {float: right;}
       padding: 0 0 20px;
   }
 
+  .cat-jumbo {
+    height: 425px;
+
+    .featured-caption {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
 }
 
 // Landscape phone to portrait tablet
@@ -425,6 +443,12 @@ footer .social-sites {float: right;}
 
   #footer-content {
       padding: 0 0 20px;
+  }
+
+  .cat-jumbo .featured-caption {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
   }
 }
 
