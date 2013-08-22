@@ -17,6 +17,7 @@
   p {
     margin: 15px 0;
     font-size: 13px;
+    font-weight: 300;
   }
 }
 
@@ -30,6 +31,7 @@
 -------------------------------------------------- */
   .navbar-wrapper {
     box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    position: relative; z-index: 10;
   }
   .navbar {margin-bottom: 0;}
   .navbar-brand {
@@ -324,7 +326,7 @@ footer .social-sites {float: right;}
   .make-column(3);
 }
 
-.article-full {
+.article-full-width {
   .make-column(12);
 }
 
@@ -333,36 +335,39 @@ footer .social-sites {float: right;}
   article {
     margin-bottom: 40px;
 
-    .article-hero {width: 100%;}
+    .article-hero {width: 100%; max-height: 350px; overflow: hidden;
+      .img-responsive {width: 100%;}
+    }
+
     p {font-weight: 300; color: @articleText;}
     a {color: @articleLink; text-transform: uppercase; font-size: 13px;}
 
     .article-headline p {font-size: 11px; text-transform: uppercase;}
-    .article-preview p     {font-size: 16px;}
-  }
-}
 
-#sidebar {
-  h3 {font-size: 16px; text-transform: uppercase; margin-top: 40px; margin-bottom: 5px; font-weight: 300;}
-  h3:first-child{margin-top: 0;}
-  .social-sites {
-    img {width: 44px; height: 44px;}
+    .article-text {
+      p      {font-size: 16px;}
+      strong {font-size: 18px; font-weight: 400;}
+    }
   }
-
-  p {font-size: 16px; line-height: 1; padding: 10px 10px 15px; font-weight: 300; background-color: #F4F4F4; border-top: 1px solid #cccfd4;}
 
 }
 
-    /* Category Jumbo Image
-    -------------------------------------------------- */
+.full-article {
+  .cat-jumbo {margin-bottom: 40px;}
+  .article-headline h1 {margin-top: 0;}
+  .article-text p {margin: 0 0 15px;}
+}
+
+
+/* Category/Article Jumbo Image
+-------------------------------------------------- */
 .cat-jumbo {
     display: block;
     position: relative;
     height: 500px;
     margin-bottom: 60px;
     background-size: cover;
-    background-position: top right;
-    z-index: -999;
+    z-index: 5;
 
     .featured-caption {
       background: rgba(255, 255, 255, .85);
@@ -381,19 +386,30 @@ footer .social-sites {float: right;}
     }      
 }
 
-#real-estate .cat-jumbo {
-    background-position: top left;
-    
-    .featured-caption {
-      float: right;
-    }      
+.top-left       {background-position: top    left;}
+.top-right      {background-position: top    right;}
+.center-left    {background-position: center left;}
+.center-center  {background-position: center center;}
+
+
+
+/* Sidebar
+-------------------------------------------------- */
+#sidebar {
+  h3 {font-size: 16px; text-transform: uppercase; margin-top: 40px; margin-bottom: 5px; font-weight: 300;}
+  h3:first-child{margin-top: 0;}
+  .social-sites {
+    img {width: 44px; height: 44px;}
+  }
+
+  p {font-size: 16px; line-height: 1; padding: 10px 10px 15px; font-weight: 300; background-color: #F4F4F4; border-top: 1px solid #cccfd4;}
+
 }
 
 
 
-//
-// Device Specific Media Queries
-// --------------------------------------------------
+/* Device Specific Media Queries
+-------------------------------------------------- */
 
 // Landscape phones and down
 @media (max-width: 320px) {
@@ -463,4 +479,6 @@ footer .social-sites {float: right;}
 
 #benefits .item {height: 35px;}
 .block-home .submit {margin: 20px 0 30px;}
+
+.bump-ninety    {position: relative; top: -90px;}
 }
