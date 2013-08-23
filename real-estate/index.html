@@ -72,20 +72,31 @@
 
     <div id="real-estate" class="category">
 
-    <div class="cat-jumbo center-left" style="background-image: url(../img/articles/real-estate/HowAreMortgageRatesTiedToCredit.jpg)">
-      <div class="container">
-        <div class="featured-caption pull-right">
-          <h1>How Are Mortgage Rates Tied To Credit?</h1>
-          <p class="lead">Many people dream of homeownership. But the best deals, in the form of the lowest mortgage rates, often go to the borrowers with the highest credit scores.</p>
-          <a href="how-are-mortgage-rates-tied-to-credit.html">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+      <div class="cat-jumbo center-left" style="background-image: url(../img/articles/real-estate/HowAreMortgageRatesTiedToCredit.jpg)">
+        <div class="container">
+          <div class="featured-caption pull-right">
+            <h1>How Are Mortgage Rates Tied To Credit?</h1>
+            <p class="lead">Many people dream of homeownership. But the best deals, in the form of the lowest mortgage rates, often go to the borrowers with the highest credit scores.</p>
+            <a href="how-are-mortgage-rates-tied-to-credit.html">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+          </div>
         </div>
       </div>
-    </div>
+
+      <div id="" class="blue-nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <button type="button" class="btn btn-cta pull-right">View Your Scores Now</button>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /.blue-nav -->
 
       <div class="container">
         <div class="row">
 
           <div id="articles" class="col-lg-8 col-sm-8">
+          <div id="post_9" class="post">
             <!-- Begin Article 1 -->
             <article>
             <div class="row">
@@ -106,7 +117,9 @@
               </div>
             </div>
             </article>
+            </div>
 
+            <div id="post_8" class="post">
             <!-- Begin Article 2 -->
             <article>
             <div class="row">
@@ -127,7 +140,9 @@
               </div>
             </div>
             </article>
+            </div>
 
+            <div id="post_7" class="post">
             <!-- Begin Article 3 -->
             <article>
             <div class="row">
@@ -148,6 +163,9 @@
               </div>
             </div>
             </article>
+            </div>
+
+            <div id="spinner"><img alt="Spinner" src="../img/spinner.gif" /> loading...</div>
 
           </div>
 
@@ -182,9 +200,12 @@
     <script src="../js/bootstrap.js"></script>
     <script src="../js/holder.js"></script>
 
+    <script src="../js/infiniScroll.js"></script>
+
     <script style="text/javascript">
     $(document).ready(function(){
 
+      $('#articles').infiniScroll('pollLevel');
 
     })
     </script>
