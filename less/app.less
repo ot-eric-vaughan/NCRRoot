@@ -339,15 +339,18 @@ footer .social-sites {float: right;}
     }
 
     p {font-size: 16px;}
-    a {color: @articleLink; text-transform: uppercase; font-size: 13px;}
 
     .article-headline {
       h1 {color: @brand-primary;}
+      h1 a:hover {text-decoration: none;}
       p {font-size: 11px; text-transform: uppercase;}
     }
 
+    .article-preview {
+      a {color: @articleLink; text-transform: uppercase; font-size: 13px;}
+    }
+
     .article-text {
-      p      {font-size: 16px;}
       strong {font-size: 18px; font-weight: 700;}
     }
   }
@@ -385,9 +388,13 @@ footer .social-sites {float: right;}
       margin-top: 60px;
 
       h1 {
-        color: @brand-primary;
         margin: 0 0 10px 0;
         text-align: left;
+        a {
+          color: @brand-primary;
+          text-transform: none;
+          font-size: 38px;
+        }
       }
       p {font-size: 16px; color: @articleText;}
       a {font-size: 13px; color: @articleLink; text-transform: uppercase;}
@@ -521,4 +528,5 @@ footer .social-sites {float: right;}
 .block-home .submit {margin: 20px 0 30px;}
 
 .bump-ninety    {position: relative; top: -90px;}
+.bump-fifty     {position: relative; top: -50px;}
 }
