@@ -83,7 +83,7 @@
     ,'freshest_id'  : 1000000
     ,'num'          : 3
     ,'lowest_id'    : 1
-    ,'sort'         : 'desc'
+    ,'sort'         : 'asc'
   };
 
   $.fn.infiniScroll = function(method) {

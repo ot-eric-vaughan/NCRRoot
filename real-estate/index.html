@@ -48,7 +48,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a class="navbar-brand" href="#"><img src="../img/ncr_logo.png" alt="NationalCreditReport"></a>
+            <a class="navbar-brand" href="/"><img src="../img/ncr_logo.png" alt="NationalCreditReport"></a>
             <div class="nav-collapse collapse">
               <ul class="nav navbar-nav pull-right">
                 <li><span class="visible-lg"></span><a href="../auto">Cars/Autos</a></li>
@@ -76,7 +76,7 @@
         <div class="container">
           <div class="featured-caption pull-right">
             <h1>How Are Mortgage Rates Tied To Credit?</h1>
-            <p class="lead">Many people dream of homeownership. But the best deals, in the form of the lowest mortgage rates, often go to the borrowers with the highest credit scores.</p>
+            <p>Many people dream of homeownership. But the best deals, in the form of the lowest mortgage rates, often go to the borrowers with the highest credit scores.</p>
             <a href="how-are-mortgage-rates-tied-to-credit.html">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
           </div>
         </div>
@@ -96,7 +96,6 @@
         <div class="row">
 
           <div id="articles" class="col-lg-8 col-sm-8">
-          <div id="post_9" class="post">
             <!-- Begin Article 1 -->
             <article>
             <div class="row">
@@ -117,9 +116,7 @@
               </div>
             </div>
             </article>
-            </div>
 
-            <div id="post_8" class="post">
             <!-- Begin Article 2 -->
             <article>
             <div class="row">
@@ -140,9 +137,7 @@
               </div>
             </div>
             </article>
-            </div>
 
-            <div id="post_7" class="post">
             <!-- Begin Article 3 -->
             <article>
             <div class="row">
@@ -163,9 +158,8 @@
               </div>
             </div>
             </article>
-            </div>
 
-            <div id="spinner"><img alt="Spinner" src="../img/spinner.gif" /> loading...</div>
+            <div class="jscroll-next-parent" style="display: none;"><a href="page2.htm" class="jscroll-next">Next Page</a></div>
 
           </div>
 
@@ -200,12 +194,16 @@
     <script src="../js/bootstrap.js"></script>
     <script src="../js/holder.js"></script>
 
-    <script src="../js/infiniScroll.js"></script>
+    <script src="../js/jquery.jscroll.min.js"></script>
 
     <script style="text/javascript">
     $(document).ready(function(){
 
-      $('#articles').infiniScroll('pollLevel');
+      $('#articles').jscroll({
+          loadingHtml: '<img src="../img/loading.gif" alt="Loading" class="scroll-loader" />',
+          padding: 20,
+          nextSelector: 'a.jscroll-next:last'
+      });
 
     })
     </script>

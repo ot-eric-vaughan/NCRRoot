@@ -17,7 +17,6 @@
   p {
     margin: 15px 0;
     font-size: 13px;
-    font-weight: 300;
   }
 }
 
@@ -222,7 +221,6 @@ color: #e1e1e1;
 
 #footer ul {
   list-style: none;
-  font-weight: 300;
 
   li strong {text-transform: uppercase;}
 }
@@ -285,7 +283,7 @@ footer .social-sites {float: right;}
   font-size: 25px;
   font-weight: 700;
   outline: none;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.25);
   background-color: #eddc17;
   background-image: -moz-linear-gradient(top, #f7e621, #ddcc08);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f7e621), to(#ddcc08));
@@ -333,20 +331,24 @@ footer .social-sites {float: right;}
 #articles {
 
   article {
+    color: @articleText;
     margin-bottom: 40px;
 
     .article-hero {width: 100%; max-height: 350px; overflow: hidden;
       .img-responsive {width: 100%;}
     }
 
-    p {font-weight: 300; color: @articleText;}
+    p {font-size: 16px;}
     a {color: @articleLink; text-transform: uppercase; font-size: 13px;}
 
-    .article-headline p {font-size: 11px; text-transform: uppercase;}
+    .article-headline {
+      h1 {color: @brand-primary;}
+      p {font-size: 11px; text-transform: uppercase;}
+    }
 
     .article-text {
       p      {font-size: 16px;}
-      strong {font-size: 18px; font-weight: 400;}
+      strong {font-size: 18px; font-weight: 700;}
     }
   }
 
@@ -355,6 +357,14 @@ footer .social-sites {float: right;}
 .full-article {
   .article-headline h1 {margin-top: 0;}
   .article-text p {margin: 0 0 15px;}
+}
+
+/* Infinite Scroll */
+.jscroll-loading {
+  padding: 0 0 20px;
+  text-align: center;
+  position: relative;
+  top: -20px;
 }
 
 
@@ -368,7 +378,7 @@ footer .social-sites {float: right;}
     z-index: 5;
 
     .featured-caption {
-      background: rgba(255, 255, 255, .85);
+      background: rgba(255, 255, 255, .90);
       position: static;
       max-width: 480px;
       padding: 20px;
@@ -411,8 +421,8 @@ footer .social-sites {float: right;}
   margin-bottom: 40px;
 
   .btn-cta {
-    margin-top: 8px;
-    font-size: 16px;
+    margin-top: 7px;
+    font-size: 18px;
     padding: 4px 12px;
   }
 }
@@ -421,13 +431,13 @@ footer .social-sites {float: right;}
 /* Sidebar
 -------------------------------------------------- */
 #sidebar {
-  h3 {font-size: 16px; text-transform: uppercase; margin-top: 40px; margin-bottom: 5px; font-weight: 300;}
+  h3 {font-size: 16px; text-transform: uppercase; margin-top: 40px; margin-bottom: 5px;}
   h3:first-child{margin-top: 0;}
   .social-sites {
     img {width: 44px; height: 44px;}
   }
 
-  p {font-size: 16px; line-height: 1; padding: 10px 10px 15px; font-weight: 300; background-color: #F4F4F4; border-top: 1px solid #cccfd4;}
+  p {font-size: 16px; line-height: 1; padding: 10px 10px 15px; background-color: #F4F4F4; border-top: 1px solid #cccfd4;}
 
 }
 
@@ -468,6 +478,11 @@ footer .social-sites {float: right;}
       bottom: 0;
     }
   }
+
+  .full-article .cat-jumbo {height: 200px;}
+
+  .blue-nav {text-align: center;}
+  .blue-nav .btn-cta {float: none;}
 
 }
 
