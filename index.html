@@ -33,65 +33,64 @@
 
   <div id="od-wrapper">
     <div class="container">
-      <p class="hidden-sm">Free 7-Day trial when you order your 3 Free Credit Scores. Membership is then just $29.95 per month until you call to cancel.</p>
-      <p class="visible-sm">Membership is just $29.95 per month after your 7-day free trial.</p>
+      <p class="hidden-sm hidden-xs">Free 7-Day trial when you order your 3 Free Credit Scores. Membership is then just $29.95 per month until you call to cancel.</p>
+      <p class="visible-sm visible-xs">Membership is just $29.95 per month after your 7-day free trial.</p>
     </div>
   </div>
 
-    <div class="navbar-wrapper">
-      <div class="container">
+  <nav class="main-nav navbar navbar-static-top" role="navigation">
+    <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="../img/ncr_logo.png" alt="NationalCreditReport" class="img-responsive"></a>
+    </div>
 
-        <div id ="ncr-navbar" class="navbar navbar-static-top">
-          <div class="container">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-            <a class="navbar-brand" href="#"><img src="img/ncr_logo.png" alt="NationalCreditReport"></a>
-            <div class="nav-collapse collapse">
-              <ul class="nav navbar-nav pull-right">
-                <li><span class="visible-lg"></span><a href="/auto">Cars/Autos</a></li>
-                <li><span class="visible-lg"></span><a href="/real-estate">Real Estate</a></li>
-                <li><span class="visible-lg"></span><a href="/credit">Credit Basics</a></li>
-                <li><span class="visible-lg"></span><a href="#">Tools</a></li>
-                <li><button type="button" class="btn btn-default">Login</button></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-main">
+      <ul class="nav navbar-nav navbar-right">
+        <li><span class="hidden-s hidden-xs"></span><a href="../auto">Cars/Autos</a></li>
+        <li><span class="hidden-s hidden-xs"></span><a href="../real-estate">Real Estate</a></li>
+        <li><span class="hidden-s hidden-xs"></span><a href="../credit">Credit Basics</a></li>
+        <li><button type="button" class="btn btn-default navbar-btn">Login</button></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
 
-      </div>
-    </div> <!-- /navbar -->
-
-    <div id="body-main">
+  <div id="body-main">
 
     <div class="block block-home background-cover">
       <div class="container">
         <div class="wrapper">
           
-          <div id="home-hero" class="col-lg-5 col-sm-5 hidden-sm"><img src="img/hero-blonde.png" alt="Blonde Hero" class="img-responsive"></div>
           
-          <div id="formWrap" class="col-lg-7 col-sm-7 pull-right">
+          
+          <div id="formWrap" class="col-sm-6 pull-right">
             <div id="home-right">
               <h1>Get Your Credit Scores From All 3 Bureaus</h1>
 
               <form>
                 <div class="row">
-                  <div class="col-lg-6 col-6 ">
-                    <input type="text"  id="firstname" name="firstname" placeholder="First Name" class="form-control hidden-sm">
+                  <div class="col-md-6">
+                    <input type="text"  id="firstname" name="firstname" placeholder="First Name" class="form-control hidden-xs">
                   </div>
-                  <div class="col-lg-6 col-6">
-                    <input type="text"  id="lastname"  name="lastname"  placeholder="Last Name"  class="form-control hidden-sm">
+                  <div class="col-md-6">
+                    <input type="text"  id="lastname"  name="lastname"  placeholder="Last Name"  class="form-control hidden-xs">
                   </div>
                 </div>
 
                 <div class="row">
-                  <div class="col-lg-6 col-6">
-                    <input type="email" id="email"     name="email"     placeholder="Email"      class="form-control hidden-sm">
+                  <div class="col-md-6">
+                    <input type="email" id="email"     name="email"     placeholder="Email"      class="form-control hidden-xs">
                   </div>
-                  <div class="col-lg-6 col-6">
-                    <input type="tel"   id="zipcode"   name="zipcode"   placeholder="Zip Code"   class="form-control hidden-sm">
+                  <div class="col-md-6">
+                    <input type="tel"   id="zipcode"   name="zipcode"   placeholder="Zip Code"   class="form-control hidden-xs">
                   </div>
                 </div>
 
@@ -99,15 +98,15 @@
                   <div class="col-lg-12 hidden-lg"><button type="button" class="btn btn-cta btn-block">View Your Scores Now</button></div>
                 </div>
                 <div class="submit row">
-                  <div class="col-lg-3 col-6 text-center"><img src="img/mcafee.png" alt="McAfee"></div>
+                  <div class="col-lg-3 col-xs-6 text-center"><img src="img/mcafee.png" alt="McAfee"></div>
                   <div class="col-lg-6"><button type="button" class="btn btn-cta visible-lg">View Your Scores Now</button></div>
-                  <div class="col-lg-3 col-6 text-center"><img src="img/norton.png" alt="Norton"></div>
+                  <div class="col-lg-3 col-xs-6 text-center"><img src="img/norton.png" alt="Norton"></div>
                 </div>
               </form>
 
-              <hr class="hline_color hidden-sm" />
+              <hr class="hline_color hidden-xs" />
 
-              <div id="benefits" class="carousel slide hidden-sm">
+              <div id="benefits" class="carousel slide hidden-xs">
                 <!-- Carousel items -->
                 <div class="carousel-inner">
                   <div class="active item">Updated Credit Reports & Scores each month</div>
@@ -133,141 +132,144 @@
     </div> <!-- /top block -->
 
     <div id="second-panel" class="block block-benefits block-home-style">
-        <div class="container">
-          <header>
-            <h1>Access to Your Credit Information Anytime or Anywhere</h1>
-          </header>
+      <div class="container">
+        <header>
+          <h1>Access to Your Credit Information Anytime or Anywhere</h1>
+        </header>
 
-          <div class="row">
-          <div class="col-lg-7 col-12 pull-right"><img src="img/hero-portal.png" alt="NCR Portal" class="img-responsive"></div>
+        <div class="row">
+          <div class="col-md-7 col-md-push-5"><img src="img/hero-portal.png" alt="NCR Portal" class="img-responsive"></div>
 
-            <div class="col-lg-5 pull-left">
-              <ul class="list-unstyled">
-                <li>
-                  <h3>Triple Bureau Credit Reports and Scores</h3>
-                  <p>Sign up and gain instant access to your TransUnion&reg;, Equifax&reg; and Experian&#8482; credit reports and scores.</p>
-                </li>
-                <li>
-                  <h3>Daily Credit Monitoring</h3>
-                  <p>We will alert you of any changes in your credit profile.</p>
-                </li>
-                <li>
-                  <h3>ScoreTracker&#8482; and ScoreCast&#8482;</h3>
-                  <p>Track how your credit score have changed over time and see how certain decisions you make about your finances might change your scores.</p>
-                </li>
-                <li>
-                  <h3>Identity Theft Reimbursement Insurance*</h3>
-                  <p>Feel secure knowing that you are protect up to $1,000,000 if your identity gets stolen.</p>
-                </li>
-                <li>
-                  <h3>Dispute Center</h3>
-                  <p>Is there something wrong on your report? Allow our Dispute Center to help you get it fixed.</p>
-                </li>
+          <div class="col-md-5 col-md-pull-7">
+            <ul class="list-unstyled">
+              <li>
+                <h3>Triple Bureau Credit Reports and Scores</h3>
+                <p>Sign up and gain instant access to your TransUnion&reg;, Equifax&reg; and Experian&#8482; credit reports and scores.</p>
+              </li>
+              <li>
+                <h3>Daily Credit Monitoring</h3>
+                <p>We will alert you of any changes in your credit profile.</p>
+              </li>
+              <li>
+                <h3>ScoreTracker&#8482; and ScoreCast&#8482;</h3>
+                <p>Track how your credit score have changed over time and see how certain decisions you make about your finances might change your scores.</p>
+              </li>
+              <li>
+                <h3>Identity Theft Reimbursement Insurance*</h3>
+                <p>Feel secure knowing that you are protect up to $1,000,000 if your identity gets stolen.</p>
+              </li>
+              <li>
+                <h3>Dispute Center</h3>
+                <p>Is there something wrong on your report? Allow our Dispute Center to help you get it fixed.</p>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-cta btn-block">Try Now</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="disclaimer">* Identity Theft Insurance underwritten by insurance company subsidiaries or affiliates of American International Group, Inc. The description herein is a summary and intended for informational purposes only and does not include all terms, conditions and exclusions of the policies described. Please refer to the actual policies for terms, conditions, and exclusions of coverage. Coverage may not be available in all jurisdictions. Coverage is not available to residents of New York.</p>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- /.block-benefits -->
+
+  </div> <!-- /#body-main -->
+
+  <footer id="footer-main">
+    <div id="footer">
+    <!-- mobile footer accordion -->
+      <div class="accordion visible-sm visible-xs" id="footer-links">
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+              Who We Are
+              <span class="glyphicon pull-right"></span>
+            </a>
+          </div>
+          <div id="collapseOne" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <ul>
+                <li><a href="#">Product Tour</a></li>
+                <li><a href="#">About Us</a></li>
               </ul>
-              <button type="button" class="btn btn-cta btn-block">Try Now</button>
-            </div>
-
-            <div class="col-12">
-              <p class="disclaimer">* Identity Theft Insurance underwritten by insurance company subsidiaries or affiliates of American International Group, Inc. The description herein is a summary and intended for informational purposes only and does not include all terms, conditions and exclusions of the policies described. Please refer to the actual policies for terms, conditions, and exclusions of coverage. Coverage may not be available in all jurisdictions. Coverage is not available to residents of New York.</p>
             </div>
           </div>
-
         </div>
-      </div> <!-- /.block-benefits -->
-
-      </div> <!-- /#body-main -->
-
-      <footer id="footer-main">
-        <div id="footer" class="container">
-        <!-- mobile footer accordion -->
-          <div class="accordion visible-sm" id="footer-links">
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                  Who We Are
-                  <span class="glyphicon pull-right"></span>
-                </a>
-              </div>
-              <div id="collapseOne" class="accordion-body collapse">
-                <div class="accordion-inner">
-                  <ul>
-                    <li><a href="#">Product Tour</a></li>
-                    <li><a href="#">About Us</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                  Categories
-                  <span class="glyphicon pull-right"></span>
-                </a>
-              </div>
-              <div id="collapseTwo" class="accordion-body collapse">
-                <div class="accordion-inner">
-                  <ul>
-                    <li><a href="/auto">Cars/Auto</a></li>
-                    <li><a href="/real-estate">Real Estate</a></li>
-                    <li><a href="/credit">Credit Basics</a></li>
-                    <li><a href="/tools">Tools</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                  Support
-                  <span class="glyphicon pull-right"></span>
-                </a>
-              </div>
-              <div id="collapseThree" class="accordion-body collapse">
-                <div class="accordion-inner">
-                  <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="support/terms-and-conditions.html">Terms & Conditions</a></li>
-                    <li><a href="support/privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                  </ul>
-                </div>
-              </div>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+              Categories
+              <span class="glyphicon pull-right"></span>
+            </a>
+          </div>
+          <div id="collapseTwo" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <ul>
+                <li><a href="/auto">Cars/Auto</a></li>
+                <li><a href="/real-estate">Real Estate</a></li>
+                <li><a href="/credit">Credit Basics</a></li>
+                <li><a href="/tools">Tools</a></li>
+              </ul>
             </div>
           </div>
-           <!-- end mobile footer accordion -->
+        </div>
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+              Support
+              <span class="glyphicon pull-right"></span>
+            </a>
+          </div>
+          <div id="collapseThree" class="accordion-body collapse">
+            <div class="accordion-inner">
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="support/terms-and-conditions.html">Terms & Conditions</a></li>
+                <li><a href="support/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- end mobile footer accordion -->
+      <div class="container">
+        <div id="footer-content" class="row footer-links">
+            <ul class="col-lg-2 col-sm-2 hidden-sm hidden-xs">
+                <li>Who We Are</li>
+                <li><a href="/product">Product Tour</a></li>
+                <li><a href="/organizations">About Us</a></li>
+            </ul>
 
-            <div id="footer-content" class="row">
-                <ul class="col col-lg-2 col-sm-2 hidden-sm">
-                    <li><strong>Who We Are</strong></li>
-                    <li><a href="/product">Product Tour</a></li>
-                    <li><a href="/organizations">About Us</a></li>
-                </ul>
+            <ul class="col-lg-2 col-sm-2 hidden-sm hidden-xs">
+                <li>Categories</li>
+                <li><a href="/auto">Cars/Auto</a></li>
+                <li><a href="/real-estate">Real Estate</a></li>
+                <li><a href="/credit">Credit Basics</a></li>
+                <li><a href="/tools">Tools</a></li>
+            </ul>
 
-                <ul class="col col-lg-2 col-sm-2 hidden-sm">
-                    <li><strong>Categories</strong></li>
-                    <li><a href="/auto">Cars/Auto</a></li>
-                    <li><a href="/real-estate">Real Estate</a></li>
-                    <li><a href="/credit">Credit Basics</a></li>
-                    <li><a href="/tools">Tools</a></li>
-                </ul>
+            <ul class="col-lg-2 col-sm-2 hidden-sm hidden-xs">
+                <li>Support</li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="support/terms-and-conditions.html">Terms & Conditions</a></li>
+                <li><a href="support/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
 
-                <ul class="col col-lg-2 col-sm-2 hidden-sm">
-                    <li><strong>Support</strong></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="support/terms-and-conditions.html">Terms & Conditions</a></li>
-                    <li><a href="support/privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-
-                <div class="col col-lg-3 col-sm-6 social-sites">
-                    <p><strong>CONNECT</strong></p>
-                    <img src="img/social-dark-fb.png">
-                    <img src="img/social-dark-twitter.png">
-                    <img src="img/social-dark-google.png">
-                </div>
+            <div class="social-sites col-lg-3">
+                <p>CONNECT</p>
+                <img src="img/social-dark-fb.png">
+                <img src="img/social-dark-twitter.png">
+                <img src="img/social-dark-google.png">
             </div>
         </div>
-      </footer>
+      </div>
+    </div>
+  </footer>
 
 
 

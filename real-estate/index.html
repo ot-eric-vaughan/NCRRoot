@@ -33,42 +33,35 @@
 
   <div id="od-wrapper">
     <div class="container">
-      <p class="hidden-sm">Free 7-Day trial when you order your 3 Free Credit Scores. Membership is then just $29.95 per month until you call to cancel.</p>
-      <p class="visible-sm">Membership is just $29.95 per month after your 7-day free trial.</p>
+      <p class="hidden-sm hidden-xs">Free 7-Day trial when you order your 3 Free Credit Scores. Membership is then just $29.95 per month until you call to cancel.</p>
+      <p class="visible-sm visible-xs">Membership is just $29.95 per month after your 7-day free trial.</p>
     </div>
   </div>
 
-    <div class="navbar-wrapper">
-      <div class="container">
+  <nav class="main-nav navbar navbar-static-top" role="navigation">
+    <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src="../img/ncr_logo.png" alt="NationalCreditReport" class="img-responsive"></a>
+    </div>
 
-        <div id ="ncr-navbar" class="navbar navbar-static-top">
-          <div class="container">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-            <a class="navbar-brand" href="/"><img src="../img/ncr_logo.png" alt="NationalCreditReport"></a>
-            <div class="nav-collapse collapse">
-              <ul class="nav navbar-nav pull-right">
-                <li><span class="visible-lg"></span><a href="../auto">Cars/Autos</a></li>
-                <li><span class="visible-lg"></span><a href="../real-estate">Real Estate</a></li>
-                <li><span class="visible-lg"></span><a href="../credit">Credit Basics</a></li>
-                <li><span class="visible-lg"></span><a href="#">Tools</a></li>
-
-                <li class="visible-sm"><a href="#">FAQ</a></li>
-                <li class="visible-sm"><a href="#">Terms & Conditions</a></li>
-                <li class="visible-sm"><a href="#">Privacy Policy</a></li>
-                <li class="visible-sm"><a href="#">Contact Us</a></li>
-
-                <li><button type="button" class="btn btn-default">Login</button></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div> <!-- /navbar -->
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-main">
+      <ul class="nav navbar-nav navbar-right">
+        <li><span class="hidden-s hidden-xs"></span><a href="../auto">Cars/Autos</a></li>
+        <li><span class="hidden-s hidden-xs"></span><a href="../real-estate">Real Estate</a></li>
+        <li><span class="hidden-s hidden-xs"></span><a href="../credit">Credit Basics</a></li>
+        <li><button type="button" class="btn btn-default navbar-btn">Login</button></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
 
     <div id="real-estate" class="category">
 
@@ -82,7 +75,7 @@
         </div>
       </div>
 
-      <div id="" class="blue-nav">
+      <div class="blue-nav" data-spy="affix" data-offset-top="610">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -95,7 +88,7 @@
       <div class="container">
         <div class="row">
 
-          <div id="articles" class="col-lg-8 col-sm-8">
+          <div id="articles" class="col-lg-8">
             <!-- Begin Article 1 -->
             <article>
             <div class="row">
@@ -160,22 +153,22 @@
 
           </div>
 
-          <div id="sidebar" class="col-lg-4 col-sm-4 hidden-sm">
-            <h3>Connect With Us</h3>
-            <div class="social-sites">
-                <img src="../img/social-light-fb.png">
-                <img src="../img/social-light-twitter.png">
-                <img src="../img/social-light-google.png">
-            </div>
-
-            <h3>Helpful Tools</h3>
-            <img src="../img/sidebar-1.jpg" class="article-hero img-responsive">
-            <p>Loan Calculator - Find out how much you can spend on a car</p>
-
-            <h3>Popular Articles</h3>
-            <img src="../img/sidebar-2.jpg" class="article-hero img-responsive">
-            <p>Article Headline Lorem Ipsum Dolor Sit Amet Consectetur</p>
+          <!--<div class="sidebar col-md-4 hidden-sm">
+          <h3>Connect With Us</h3>
+          <div class="social-sites">
+              <img src="../img/social-light-fb.png">
+              <img src="../img/social-light-twitter.png">
+              <img src="../img/social-light-google.png">
           </div>
+
+          <h3>Helpful Tools</h3>
+          <img src="../img/sidebar-1.jpg" class="article-hero img-responsive">
+          <p>Loan Calculator - Find out how much you can spend on a car</p>
+
+          <h3>Popular Articles</h3>
+          <img src="../img/sidebar-2.jpg" class="article-hero img-responsive">
+          <p>Article Headline Lorem Ipsum Dolor Sit Amet Consectetur</p>
+        </div>-->
 
         </div>
       </div>

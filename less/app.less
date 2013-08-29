@@ -1,9 +1,11 @@
 /*
-/* Colors
+/* Custom Variables
 -------------------------------------------------- */
 @white:         #FFFFFF;
 @articleLink:   #24bcdd;
 @articleText:   #73787a;
+
+@grid-float-breakpoint:     @screen-tablet;
 
 /*
 /* Root Index Specific
@@ -15,8 +17,12 @@
   -webkit-box-shadow: inset 0 0px 0px 0 #E3E3E3, inset 0 -8px 15px -12px #999; box-shadow: inset 0 0px 0px 0 #E3E3E3, inset 0 -8px 15px -12px #999;
 
   p {
-    margin: 15px 0;
+    margin: 10px 60px;
     font-size: 13px;
+
+    @media (min-width: @screen-sm) {
+      margin: 15px 0;
+    }
   }
 }
 
@@ -28,24 +34,43 @@
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
-  .navbar-wrapper {
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-    position: relative; z-index: 10;
+.navbar {
+  margin-bottom: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  position: relative; z-index: 10;
+  background-color: #FFFFFF;
+}
+
+.navbar-brand {
+  margin-left: 0;
+  margin-right: 0;
+  width: 240px;
+  padding-right: 0;
+
+  @media (min-width: @screen-sm) {
+    width: 260px;
+    padding-right: 15px;
   }
-  .navbar {margin-bottom: 0;}
-  .navbar-brand {
-    margin-left: 0;
-    margin-right: 0;
+  @media (min-width: @screen-md) {
+    width: 330px;
+    padding-right: 15px;
   }
+}
+
   .navbar-nav > li > a {
-  color: @text-color;
-  font-size: 18px;
-  margin-top: 5px;
+  color: @brand-primary;
+  font-size: 16px;
+  padding-bottom: 18px;
+  padding-top: 19px;
+
+  @media (min-width: @screen-md) {
+    font-size: 18px;
+  }
 }
 .navbar-nav > li > span {
   background: url("../img/nav-div.png") center center no-repeat;
   width: 3px;
-  height: 60px;
+  height: 57px;
   float: left;
   position: relative;
   top: 2px;
@@ -55,9 +80,20 @@
   background-color: #FFFFFF;
 }
 
-.navbar-nav button {position: relative; top: 15px; padding: 5px 12px; margin-left: 5px;}
+.main-nav button {margin-top: 11px; margin-left: 5px; background-color: #f0f4f5;}
 
+.navbar-toggle {
+  background-color: #e2e5e7;
+  border: 1px solid #afb3b6;
+  padding: 9px;
 
+  // Bars
+  .icon-bar {
+    background-color: #afb3b6;
+    width: 24px;
+    height: 3px;
+  }
+}
 
 /* Home Section
 -------------------------------------------------- */
@@ -66,47 +102,88 @@ background-size: cover !important;
 }
 
 .block-home {
-  background: url("../img/bg-scene.jpg") center right no-repeat;
+  background: url("../img/bg-scene.jpg") top right no-repeat;
   min-height: 400px;
   height: 99%;
   position: relative;
   overflow: hidden;
   color: #FFFFFF;
-}
 
-.block-home .down-btn {
-  position: absolute;
-  background: #ffffff;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  width: 50px;
-  height: 22px;
-  color: #330f13;
-  text-align: center;
-  bottom: 0;
-  left: 50%;
-  margin-left: -25px;
-  line-height: 22px;
-  font-size: 18px;
-}
-.block-home .down-btn .glyphicon {
-  display: block;
-  padding-top: 2px;
-}
-.block-home .down-btn:hover {
-  text-decoration: none;
-  color: #1f8dd6;
-}
-.block-home .down-btn .glyphicon {
-  display: block;
-  padding-top: 2px;
-}
+  @media (min-width: @screen-sm) {
+    background: url("../img/hero_bg.jpg") top center no-repeat;
+  }
 
-.block-home #home-hero {
-  position: absolute;
-  bottom: 0;
-}
-.block-home #home-hero img {
+  form input {
+    margin-top: 15px;
+    height: 40px;
+    border: 1px solid @brand-primary;
+    color: @brand-primary;
+  }
+
+  ::-webkit-input-placeholder { color: @brand-primary; opacity:1;}
+  ::-moz-placeholder          { color: @brand-primary; opacity:1;} /* firefox 19+ */
+  :-ms-input-placeholder      { color: @brand-primary; opacity:1;} /* ie */
+  input:-moz-placeholder      { color: @brand-primary; opacity:1;}
+
+  .submit {
+    margin: 15px 0;
+  }
+
+  #button-full {margin-top: 10px;}
+
+  .item {height: 62px; font-size: 30px; line-height: 30px; text-shadow: none; text-align: center; margin: 0 10px;}
+
+  .carousel-indicators {
+    position: relative;
+    bottom: -5px;
+    left: 50%;
+    z-index: 15;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 6px;
+      text-indent: -999px;
+      border: 2px solid #ffffff;
+      background-color: #ffffff;
+      border-radius: 10px;
+    }
+    li.active {
+      width: 10px;
+      height: 10px;
+      background-color: @brand-primary;
+    }
+  }
+
+  .down-btn {
+    position: absolute;
+    background: #ffffff;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 50px;
+    height: 22px;
+    color: #330f13;
+    text-align: center;
+    bottom: 0;
+    left: 50%;
+    margin-left: -25px;
+    line-height: 22px;
+    font-size: 18px;
+
+    .glyphicon {
+      display: block;
+      padding-top: 2px;
+    }
+  }
+
+  .down-btn:hover {
+    text-decoration: none;
+    color: #1f8dd6;
+  }
 }
 
 hr.hline_color {
@@ -118,56 +195,24 @@ hr.hline_color {
    margin-bottom: 10px;
 }
 
-.block h1 {font-size: 38px; text-align: center; padding: 0 10px;
-}
+.block h1 {
+  font-size: 38px; text-align: center; padding: 0 10px;
 
-// Home Carousel
-#benefits .item {height: 62px; font-size: 30px; line-height: 30px; text-shadow: none; text-align: center; margin: 0 10px;}
-
-#benefits .carousel-indicators {
-  position: relative;
-  bottom: -5px;
-  left: 50%;
-  z-index: 15;
-  width: 130px;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-
-#benefits .carousel-indicators li {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 6px;
-  text-indent: -999px;
-  border: 2px solid #ffffff;
-  background-color: #ffffff;
-  border-radius: 10px;
-}
-
-#benefits .carousel-indicators li.active {
-  width: 10px;
-  height: 10px;
-  background-color: @brand-primary;
-}
-
-.block-home {
-  form input {
-    margin-top: 15px;
-    height: 40px;
-    border: 1px solid @brand-primary;
+  @media (min-width: @screen-md) {
+    font-size: 42px;
   }
 
-  .submit {
-    margin: 15px 0;
+  @media (min-width: @screen-lg) {
+    font-size: 48px;
   }
-
-  #button-full {margin-top: 10px;}
 }
 
 #home-right {
+  margin-top: 50px;
+
+  @media (min-width: @screen-md) {
     margin-top: 80px;
+  }
 }
 
 
@@ -217,16 +262,20 @@ color: #e1e1e1;
 }
 
 #footer {color: #a1a8aa;}
-#footer-content {padding: 50px 0;}
+#footer-content {
+  @media (min-width: @screen-md) {
+    padding: 50px 0;
+  }
+}
 
 #footer ul {
   list-style: none;
 
-  li strong {text-transform: uppercase;}
+  li:first-child {text-transform: uppercase; font-weight: 700;}
 }
 #footer a {color: #a1a8aa;}
 
-#footer .accordion-group {
+#footer-main .accordion-group {
     border: none;
     border-bottom: 1px solid #5a5e5f;
 
@@ -244,7 +293,7 @@ color: #e1e1e1;
       content: "\002b";
   }
 
-  .accordion-toggle {background: #292b2e; text-decoration: none;}
+  .accordion-toggle {background: #292b2e; text-decoration: none; display: block;}
   .accordion-toggle:hover {text-decoration: none;}
 
   .collapsed {background: #303336;}
@@ -269,9 +318,12 @@ color: #e1e1e1;
 
 .social-sites {
   img {width: 35px; height: 36px; margin-right: 15px;}
-}
 
-footer .social-sites {float: right;}
+  @media (min-width: @screen-md) {
+    font-weight: 700;
+    float: right;
+  }
+}
 
 /* Buttons 
 -------------------------------------------------- */
@@ -318,14 +370,14 @@ footer .social-sites {float: right;}
 -------------------------------------------------- */
 
 .article-headline {
-  .make-column(9);
+  .make-lg-column(9);
 }
 .article-shares {
-  .make-column(3);
+  .make-lg-column(3);
 }
 
 .article-full-width {
-  .make-column(12);
+  .make-lg-column(12);
 }
 
 #articles {
@@ -381,10 +433,17 @@ footer .social-sites {float: right;}
 
     .featured-caption {
       background: rgba(255, 255, 255, .90);
-      position: static;
-      max-width: 480px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
       padding: 20px;
       margin-top: 60px;
+
+      @media (min-width: @screen-md) {
+        position: static;
+        max-width: 480px
+      }
 
       h1 {
         margin: 0 0 10px 0;
@@ -437,13 +496,21 @@ footer .social-sites {float: right;}
   }
 }
 
+.blue-nav.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
 
 /* Sidebar
 -------------------------------------------------- */
-#sidebar {
+.sidebar {
   h3 {font-size: 16px; text-transform: uppercase; margin-top: 40px; margin-bottom: 5px;}
   h3:first-child{margin-top: 0;}
   .social-sites {
+    float: none;
     img {width: 44px; height: 44px;}
   }
 
@@ -456,80 +523,21 @@ footer .social-sites {float: right;}
 /* Device Specific Media Queries
 -------------------------------------------------- */
 
-// Landscape phones and down
-@media (max-width: 320px) {
-  .block h1 {margin: 0 38px;}
-}
+/* Extra small devices (phones, up to 480px) */
 
-// Landscape phones and down
-@media (max-width: 480px) {
-  .navbar-brand {
-    padding-left: 0; padding-right: 0; width: 260px !important;
-    img {width: 260px;}
-  }
-
-  #home-right {
-    margin-top: 40px;
-
-    #button-full {margin-top: 20px; margin-bottom: 20px;}
-  }
-
-  .block h1 {margin: 0 38px;}
-
-  #footer-content {
-      padding: 0 0 20px;
-  }
-
-  .cat-jumbo {
-    height: 425px;
-
-    .featured-caption {
-      position: absolute;
-      bottom: 0;
-    }
-  }
-
-  .full-article .cat-jumbo {height: 200px;}
-
-  .blue-nav {text-align: center;}
-  .blue-nav .btn-cta {float: none;}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm) {
 
 }
 
-// Landscape phone to portrait tablet
-@media (max-width: 767px) {
-  .navbar-brand {
-    width: 335px;
-  }
-  form input {display: block !important;}
-
-  footer .social-sites {
-    float: left;
-  }
-
-  #footer-content {
-      padding: 0 0 20px;
-  }
-
-  .cat-jumbo .featured-caption {
-    position: absolute;
-    bottom: 0;
-    max-width: 100%;
-  }
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md) {
+  .bump-ninety    {position: relative; top: -90px;}
+  .bump-fifty     {position: relative; top: -50px;}
 }
 
-// Portrait tablet to landscape and desktop
-@media (min-width: 768px) and (max-width: 979px) {
-  .block h1 {margin: 0 35px;}
-}
-
-// Large desktop
-@media (min-width: 1200px) {
-.block h1 {font-size: 48px; margin: 0 50px;}
-
-#benefits .item {height: 35px;}
-.block-home .submit {margin: 20px 0 30px;}
-
-.bump-ninety    {position: relative; top: -90px;}
-.bump-fifty     {position: relative; top: -50px;}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg) {
+  .bump-ninety    {position: relative; top: -120px;}
+  .bump-fifty     {position: relative; top: -80px;}
 }
